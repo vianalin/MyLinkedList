@@ -23,7 +23,7 @@ public class Node{
  		return prev;
  	}
 
- 	public setData(String value) {
+ 	public void setData(String value) {
  		data = value;
  	}
 
