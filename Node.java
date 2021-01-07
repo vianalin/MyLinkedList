@@ -5,8 +5,6 @@ public class Node{
 	
 	public Node(String value) {/*create a constructor*/
 		data = value;
-		next = null;
-		prev = null;
 	}
 	
  	//write get/set methods for all three instance variables.
