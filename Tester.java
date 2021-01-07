@@ -16,14 +16,19 @@ public class Tester {
 		System.out.println("testing set and get: ");
 		Node previous = new Node("good morning");
 		Node next = new Node("good night");
-		
 		one.setPrev(previous);
 		one.setData("good afternoon");
 		one.setNext(next);
-		
 		System.out.println(one.getPrev() == previous);
 		System.out.println(one.getData().equals("good afternoon"));
 		System.out.println(one.getNext() == next);
+
+
+		//mylinkedlist.java:
+
+		System.out.println("testing creation of mylinkedlist: ");
+		MyLinkedList three = new MyLinkedList();
+		System.out.println(three.size() == 0);
 		
 	}
 }
