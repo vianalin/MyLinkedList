@@ -13,5 +13,17 @@ public class Tester {
 		System.out.println(one.getNext() == null);
 		System.out.println(two.getPrev() == null);
 
+		System.out.println("testing set and get: ");
+		Node previous = new Node("good morning");
+		Node next = new Node("good night");
+		
+		one.setPrev(previous);
+		one.setData("good afternoon");
+		one.setNext(next);
+		
+		System.out.println(one.getPrev() == previous);
+		System.out.println(one.getData().equals("good afternoon"));
+		System.out.println(one.getNext() == next);
+		
 	}
 }
