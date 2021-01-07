@@ -9,6 +9,7 @@ public class Node{
 	
  	//write get/set methods for all three instance variables.
 
+ 	//get:
  	public String getData() {
  		return data;
  	}
@@ -21,6 +22,8 @@ public class Node{
  		return prev;
  	}
 
+
+ 	//set: 
  	public void setData(String value) {
  		data = value;
  	}
