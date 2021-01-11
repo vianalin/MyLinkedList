@@ -26,6 +26,7 @@ public class Tester {
 
 		//mylinkedlist.java:
 
+		//part 1:
 		System.out.println("testing creation of mylinkedlist: ");
 		MyLinkedList three = new MyLinkedList();
 		System.out.println(three.size() == 0);
@@ -56,6 +57,17 @@ public class Tester {
 		System.out.println(four.toString().equals("[ih, bye, 1, hi, hii]"));
 		//four.set(-9, "sup"); //testing out of bounds exception
 		//four.set(8, "hola");
+
+		//part 2:
+		System.out.println("testing remove: ");
+		four.remove(0);
+		System.out.println(four.toString().equals("[bye, 1, hi, hii]"));
+		four.remove(3);
+		System.out.println(four.toString().equals("[bye, 1, hi]"));
+		four.remove(1);
+		System.out.println(four.toString().equals("[bye, hi]"));
+		//four.remove(-1); //testing out of bounds exception
+		four.remove(7);
 
 	}
 }
