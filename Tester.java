@@ -43,7 +43,7 @@ public class Tester {
 		four.add(1, "hello");
 		System.out.println(four.toString().equals("[ih, hello, 1, hii, hi]"));
 		//four.add(-4, "stupid"); //testing out of bounds exception
-		//four.add(9, "idiot");
+		four.add(5, "idiot");
 
 		System.out.println("testing index: ");
 		System.out.println(four.get(2).equals("1"));
