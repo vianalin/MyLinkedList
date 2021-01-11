@@ -27,7 +27,7 @@ public class MyLinkedList{
  	}
 
 	public void add(int index, String value) throws IndexOutOfBoundsException {
-		if(index < 0 || index > size()) throw new IndexOutOfBoundsException();
+		if(index < 0 || index >= size()) throw new IndexOutOfBoundsException();
 
 		if(index == 0) { //add in start
 			Node n = new Node(value);
@@ -60,7 +60,9 @@ public class MyLinkedList{
 		return getNode(index).getData();
 	}
 
- 	//public String set(int index, String value);
+ 	//public String set(int index, String value) throws IndexOutOfBoundsException {
+ 	//	if(index < 0 || index >)
+ 	//}
 
  	public String toString() {
  		String result = "[";
