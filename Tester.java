@@ -30,5 +30,10 @@ public class Tester {
 		MyLinkedList three = new MyLinkedList();
 		System.out.println(three.size() == 0);
 		
+		System.out.println("testing add boolean: ");
+		MyLinkedList four = new MyLinkedList();
+		System.out.println(four.add("1"));
+		System.out.println(four.add("hii"));
+		System.out.println(four.toString());
 	}
 }
