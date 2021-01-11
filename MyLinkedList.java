@@ -11,7 +11,20 @@ public class MyLinkedList{
  		return size;
  	}
 
- 	//public boolean add(String value);
+ 	public boolean add(String value) {
+ 		Node n = new Node(value);
+ 		if(start == null) {
+ 			start = n;
+ 			end = n;
+ 		}
+ 		else {
+ 			n.setPrev(end);
+ 			end.setNext(n);
+ 			end = n;
+ 		}
+ 		size++;
+ 		return true;
+ 	}
 
 
 
