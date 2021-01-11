@@ -137,4 +137,14 @@ public class MyLinkedList{
 		size--;
 		return result;
 	}
+
+	//write method that in O(1) runtime, moves all the elementer from other to end of this
+	//no looping
+	public void extend(MyLinkedList other) {
+		end.setNext(other.start);
+		end = other.end;
+		other.start.setPrev(end);
+		size += other.size();
+		return;
+	}
 }
