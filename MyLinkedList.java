@@ -118,7 +118,7 @@ public class MyLinkedList{
 			size--;
 			return result;
 		}
-		if(index > 0 && index < size) {
+		if(index > 0 && index < size - 1) {
 			Node prev = getNode(index - 1);
 			Node remove = getNode(index);
 			Node next = getNode(index + 1);
