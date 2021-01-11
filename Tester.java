@@ -67,7 +67,15 @@ public class Tester {
 		four.remove(1);
 		System.out.println(four.toString().equals("[bye, hi]"));
 		//four.remove(-1); //testing out of bounds exception
-		four.remove(7);
+		//four.remove(7);
+
+		System.out.println("testing extend: ");
+		MyLinkedList five = new MyLinkedList();
+		five.add("banana");
+		five.add("6000");
+		five.add("monkey");
+		four.extend(five);
+		System.out.println(four.toString().equals("[bye, hi, banana, 6000, monkey]"));
 
 	}
 }
