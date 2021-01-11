@@ -36,7 +36,19 @@ public class MyLinkedList{
 
  	//public String set(int index, String value);
 
- 	//public String toString();
+ 	public String toString() {
+ 		String result = "[";
+ 		Node current = start;
+ 		int count = 0;
+ 		while(current != null) {
+ 			result += current.getData();
+ 			if(current.getNext() != null) result += ", ";
+ 			current = current.getNext();
+ 			count++;
+ 		}
+ 		result += "]";
+ 		return result;
+ 	}
 
  	//Any helper method that returns a Node object MUST BE PRIVATE!
 }
