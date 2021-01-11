@@ -77,5 +77,22 @@ public class Tester {
 		four.extend(five);
 		System.out.println(four.toString().equals("[bye, hi, banana, 6000, monkey]"));
 
+		MyLinkedList a = new MyLinkedList();
+    	MyLinkedList b = new MyLinkedList();
+    	for(int i = 0; i < 10; i++){
+    		if(i < 5){
+        	a.add(i+"");
+      		}else{
+        	b.add(i+"");
+      		}
+    	}
+   		System.out.println();
+    	System.out.println("A:"+a+a.size());
+    	System.out.println("B:"+b+b.size());
+
+    	a.extend(b);
+    	System.out.println("A:"+a+a.size());
+    	System.out.println("B:"+b+b.size());
+
 	}
 }
