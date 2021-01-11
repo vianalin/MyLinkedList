@@ -60,9 +60,13 @@ public class MyLinkedList{
 		return getNode(index).getData();
 	}
 
- 	//public String set(int index, String value) throws IndexOutOfBoundsException {
- 	//	if(index < 0 || index >)
- 	//}
+ 	public String set(int index, String value) throws IndexOutOfBoundsException {
+ 		if(index < 0 || index >= size) throw new IndexOutOfBoundsException();
+ 		Node n = getNode(index);
+ 		String result = n.getData();
+ 		n.setData(value);
+ 		return result;
+ 	}
 
  	public String toString() {
  		String result = "[";
