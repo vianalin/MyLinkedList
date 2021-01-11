@@ -38,16 +38,24 @@ public class Tester {
 		System.out.println(four.size() == 2);
 
 		System.out.println("testing add void: ");
-		four.add(2, "hi");
+		four.add(1, "hi");
 		four.add(0, "ih");
 		four.add(1, "hello");
-		System.out.println(four.toString().equals("[ih, hello, 1, hii, hi]"));
+		System.out.println(four.toString().equals("[ih, hello, 1, hi, hii]"));
 		//four.add(-4, "stupid"); //testing out of bounds exception
-		four.add(5, "idiot");
+		//four.add(5, "idiot");
 
 		System.out.println("testing index: ");
 		System.out.println(four.get(2).equals("1"));
 		//four.get(7); //testing out of bounds exception
 		//four.get(-6);
+
+		System.out.println("testing set: ");
+		System.out.println(four.toString().equals("[ih, hello, 1, hi, hii]"));
+		four.set(1, "bye");
+		System.out.println(four.toString().equals("[ih, bye, 1, hi, hii]"));
+		//four.set(-9, "sup"); //testing out of bounds exception
+		//four.set(8, "hola");
+
 	}
 }
