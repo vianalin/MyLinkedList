@@ -6,7 +6,9 @@ public class MyLinkedList{
  	public MyLinkedList() {
  		size = 0;
  	}
- 	
+
+ 	//part 1:
+
  	public int size() {
  		return size;
  	}
@@ -82,7 +84,7 @@ public class MyLinkedList{
  		return result;
  	}
 
-
+	//Any helper method that returns a Node object MUST BE PRIVATE!
  	private Node getNode(int index) throws IndexOutOfBoundsException {
 		if (index < 0 || index >= size) throw new IndexOutOfBoundsException();
 		Node current = start;
@@ -91,5 +93,48 @@ public class MyLinkedList{
 		}
 		return current;
 	}
- 	//Any helper method that returns a Node object MUST BE PRIVATE!
+
+
+	//part 2
+ 	//A Implement the remove operation.
+	//cases: 
+	//removing the head/tail , 
+	//removing the final element of a list (size 1 list)
+	//removing from the middle.
+	public String remove(int index) throws IndexOutOfBoundsException {
+		if(index < 0 || index >= size()) throw new IndexOutOfBoundsException();
+		if(size == 1) {
+			String result = start.getData();
+			start = null;
+			end = null;
+			size--;
+			return result;
+		}
+		if(index == 0) {
+			String result = start.getData();
+			start = start.getNext();
+			start.getPrev().setNext(null);
+			start.setPrev(null);
+			size--;
+			return result;
+		}
+		if(index > 0 && index < size) {
+			Node prev = getNode(index - 1);
+			Node remove = getNode(index);
+			Node next = getNode(index + 1);
+			String result = remove.getData();
+			prev.setNext(next);
+			next.setPrev(prev);
+			remove.setNext(null);
+			remove.setPrev(null);
+			size--;
+			return result;
+		}
+		String result = end.getData();
+		end = end.getPrev();
+		end.getNext().setPrev(null);
+		end.setNext(null);
+		size--;
+		return result;
+	}
 }
