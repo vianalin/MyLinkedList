@@ -140,11 +140,16 @@ public class MyLinkedList{
 
 	//write method that in O(1) runtime, moves all the elementer from other to end of this
 	//no looping
+	//size of other is reduced to 0, size of this is now both of original list combined
 	public void extend(MyLinkedList other) {
 		end.setNext(other.start);
 		end = other.end;
 		other.start.setPrev(end);
 		size += other.size();
+
+		other.start = null;
+		other.end = null;
+		other.size = 0;
 		return;
 	}
 }
