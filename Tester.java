@@ -34,6 +34,15 @@ public class Tester {
 		MyLinkedList four = new MyLinkedList();
 		System.out.println(four.add("1"));
 		System.out.println(four.add("hii"));
-		System.out.println(four.toString());
+		System.out.println(four.toString().equals("[1, hii]"));
+		System.out.println(four.size() == 2);
+
+		System.out.println("testing add void: ");
+		four.add(2, "hi");
+		four.add(0, "ih");
+		four.add(1, "hello");
+		System.out.println(four.toString().equals("[ih, hello, 1, hii, hi]"));
+		//four.add(-4, "stupid"); //testing out of bounds exception
+		//four.add(9, "idiot");
 	}
 }
