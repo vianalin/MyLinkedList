@@ -39,6 +39,7 @@ public class MyLinkedList{
 		}
 
 		if(index > 0 && index < size) { //add in middle
+
 			Node prev = getNode(index - 1);
 			Node next = getNode(index);
 			Node n = new Node(value);
@@ -54,8 +55,14 @@ public class MyLinkedList{
 		return;
 	}
 
- 	//public String get(int index); 
- 	//if(index < 0 || index >= size) throw new IndexOutOfBoundsException();
+ 	public String get(int index) throws IndexOutOfBoundsException {
+		if(index < 0 || index >= size) throw new IndexOutOfBoundsException();
+		Node current = start;
+		for(int i = 0; i < index; i++) {
+			current = current.getNext();
+		}
+		return current.getData();
+	}
 
  	//public String set(int index, String value);
 
@@ -75,11 +82,11 @@ public class MyLinkedList{
 
  	private Node getNode(int index) throws IndexOutOfBoundsException {
 		if (index < 0 || index >= size) throw new IndexOutOfBoundsException();
-		Node n = start;
+		Node current = start;
 		for(int i = 0; i < index; i++) {
-			n = n.getNext();
+			current = current.getNext();
 		}
-		return n;
+		return current;
 	}
  	//Any helper method that returns a Node object MUST BE PRIVATE!
 }
